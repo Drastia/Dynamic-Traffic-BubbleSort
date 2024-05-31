@@ -192,20 +192,7 @@ class _MyHomePageState extends State<MyHomePage> {
           greenLightDuration = 10;
           _toggleTrafficLight();
         }
-      } else {
-        for (var lane in lanes) {
-          // Add a random vehicle to each lane
-          int vehicleType = random.nextInt(3);
-          if (vehicleType == 0) {
-            lane.cars += 1;
-          } else if (vehicleType == 1) {
-            lane.trucks += 1;
-          } else if (vehicleType == 2) {
-            lane.motorcycles += 1;
-          }
-          lane.color = Colors.red;
-        }
-      }
+      } 
 
       sortedLanes = List.from(lanes);
       BubbleSortLane(sortedLanes);
